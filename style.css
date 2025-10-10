@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(-45deg, #000000, #111111, #222222, #000000);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+  overflow: hidden;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container h1 {
+  font-size: 3.5rem;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-shadow: 0 0 10px #00c6ff, 0 0 20px #00c6ff, 0 0 40px #0072ff;
+  opacity: 0;
+  animation:
+    fadeIn 2s ease forwards,
+    pulse 3s ease-in-out 2s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px #00c6ff, 0 0 20px #00c6ff, 0 0 40px #0072ff;
+  }
+  100% {
+    text-shadow: 0 0 20px #00eaff, 0 0 40px #00eaff, 0 0 80px #009dff;
+  }
+}
+
+.container p {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  color: #ccc;
+  opacity: 0;
+  animation: fadeIn 2s ease 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
