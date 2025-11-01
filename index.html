@@ -1,16 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KelsaConsult</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelsa Caconsult | Inclusive Recruitment Specialists</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --deep-black: #000000;
+            --greyorange: #AA8239;
+            --soft-ivory: #F8F4E3;
+            --warm-gray: #B2AEAA;
+            --sage-green: #7A9E8A;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--soft-ivory);
+            color: var(--deep-black);
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #F8F4E3 0%, #B2AEAA 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gradient-bg::before,
+        .gradient-bg::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(122, 158, 138, 0.15);
+            filter: blur(100px);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .gradient-bg::before {
+            width: 450px;
+            height: 450px;
+            top: -150px;
+            left: -200px;
+        }
+
+        .gradient-bg::after {
+            width: 350px;
+            height: 350px;
+            bottom: -150px;
+            right: -150px;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            border: 1px solid var(--warm-gray);
+            height: 100%;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+            border-color: var(--greyorange);
+        }
+
+        .icon-wrapper {
+            background-color: var(--sage-green);
+            color: var(--greyorange);
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .feature-card:hover .icon-wrapper {
+             background-color: var(--greyorange);
+             color: white;
+        }
+
+        .text-accent {
+            color: var(--greyorange);
+        }
+
+        .title-underline {
+            display: inline-block;
+            position: relative;
+        }
+
+        .title-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 4px;
+            border-radius: 2px;
+            background-color: var(--greyorange);
+        }
+
+        header {
+            background-color: white;
+            border-bottom: 1px solid var(--warm-gray);
+        }
+    </style>
 </head>
-<body>
-  <div class="container">
-    <h1>KelsaConsult</h1>
-    <p>We’re building something amazing. Stay tuned.</p>
+<body class="antialiased">
+
+<!-- Header -->
+<header class="bg-white/80 backdrop-blur-md border-b border-slate-200">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center space-x-4">
+      <img src="https://drive.google.com/thumbnail?id=1VcmUrpmD_505-Rad2ufwfZ5C8GP9i4_a&sz=w1000" alt="Logo" class="h-[170px] w-auto object-contain">
+      <h1 class="text-2xl font-bold text-gray-900">Kelasa Consult</h1>
+    </div>
   </div>
-  <script src="script.js"></script>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="gradient-bg">
+        <div class="relative z-10 max-w-6xl mx-auto px-6 text-center py-20 md:py-32">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Building <span class="text-accent">Diverse and Equitable</span> Workplaces</h2>
+            <p class="max-w-4xl mx-auto text-gray-600 leading-relaxed text-lg">
+                We understand that hiring the ideal professionals is fundamental to an organization’s progress and achievement. We follow a transparent and inclusive recruitment process that reflects our values, ensures fairness, and supports a diverse and equitable workplace where everyone feels seen, heard, and valued.
+            </p>
+        </div>
+    </section>
+
+    <!-- Our Commitment -->
+    <section class="py-20 md:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h3 class="text-3xl md:text-4xl font-bold title-underline">Our Commitment to a Fair Process</h3>
+            <p class="max-w-3xl mx-auto mt-12 text-gray-600">
+                Our recruitment process reflects our unwavering commitment to promoting anti-racism, diversity, equity, and inclusion. We strive to provide equal opportunities to all individuals, regardless of their background, race, ethnicity, gender, age, or any other protected characteristic.
+            </p>
+        </div>
+    </section>
+
+    <!-- Our Approach -->
+    <section class="py-20 md:py-24" style="background-color: var(--soft-ivory);">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl md:text-4xl font-bold title-underline">Our Approach</h3>
+                <p class="max-w-2xl mx-auto mt-12 text-gray-600">
+                    We ensure a meticulous and adaptive approach to find the perfect fit for your team.
+                </p>
+
+                <!-- Added Paragraph -->
+                <p class="max-w-4xl mx-auto mt-8 text-gray-700 leading-relaxed">
+                    This platform offers a comprehensive range of career opportunities across both the IT (Information Technology) and non-IT sectors, catering to diverse skill sets and professional aspirations. Within IT, candidates can find roles in software development, cybersecurity, data science, cloud computing, and network administration, among others. Simultaneously, the non-IT offerings span fields like finance, marketing, human resources, operations, and various specialized industry roles, ensuring a broad spectrum of employment options for all job seekers.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="feature-card flex flex-col items-center text-center">
+                    <div class="icon-wrapper">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2">In-Depth Assessment</h4>
+                    <p class="text-gray-600">Carrying out an in-depth assessment to define the duties and expectations of each role.</p>
+                </div>
+
+                <div class="feature-card flex flex-col items-center text-center">
+                    <div class="icon-wrapper">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2">Thorough Job Descriptions</h4>
+                    <p class="text-gray-600">Crafting thorough job descriptions encompassing all necessary qualifications and criteria.</p>
+                </div>
+
+                <div class="feature-card flex flex-col items-center text-center">
+                    <div class="icon-wrapper">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2">Consistent Revisions</h4>
+                    <p class="text-gray-600">Ensuring job descriptions are consistently revised to meet shifting business demands.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="py-16 text-white" style="background-color: var(--deep-black);">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+        <h3 class="text-3xl font-bold mb-6">Get In Touch</h3>
+        <p class="text-gray-300 mb-8">We're here to help you build the team you've always wanted.</p>
+
+        <div class="flex flex-col md:flex-row justify-center items-center gap-8 mb-10">
+            <a href="tel:+919482076696" class="flex items-center gap-3 text-lg text-gray-100 hover:text-white transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                <span>+91 94820 76696</span>
+            </a>
+            <a href="mailto:hr@kelsaconsult.com" class="flex items-center gap-3 text-lg text-gray-100 hover:text-white transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                <span>hr@kelsaconsult.com</span>
+            </a>
+        </div>
+
+        <!-- Leadership Section -->
+        <div class="text-gray-400 mb-10">
+  <p class="text-lg mt-2">Varshitha G – <span class="text-gray-300 font-medium">CEO/ HR HEAD </span></p>
+<p class="text-lg">Raju J Shashank – <span class="text-gray-300 font-medium">DIRECTOR</span></p>
+            <p class="text-lg mt-2">Vikas Gowda – <span class="text-gray-300 font-medium">DIRECTOR</span></p>
+          
+        </div>
+
+        <div class="border-t border-gray-700 mt-12 pt-8">
+            <p class="text-gray-500 text-sm">© 2025 Kelasa Consult. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
